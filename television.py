@@ -1,8 +1,8 @@
 class Television():
     MIN_VOLUME = 0
-    MAX_VOLUME = 2
-    MIN_CHANNEL = 0
-    MAX_CHANNEL = 3
+    MAX_VOLUME = 10
+    MIN_CHANNEL = 1
+    MAX_CHANNEL = 5
 
     def __init__(self) -> None:
         """
@@ -79,6 +79,60 @@ class Television():
         if self.__muted:
             self.__muted = False
         self.__volume -= 1
+
+    def volume_set(self, new_volume: int) -> None:
+        """
+        Method to set the volume of the Television object
+        :param new_volume:
+        """
+        if not self.__status:
+            return
+        elif new_volume > Television.MAX_VOLUME or new_volume < Television.MIN_VOLUME:
+            return
+
+        if self.__muted:
+            self.__muted = False
+        self.__volume = new_volume
+
+    def channel_set(self, new_channel: int) -> None:
+        """
+        Method to set the channel of the Television object
+        :param new_channel:
+        """
+        if not self.__status:
+            return
+        elif new_channel > Television.MAX_CHANNEL or new_channel < Television.MIN_CHANNEL:
+            return
+
+        self.__channel = new_channel
+
+    def volume_get(self) -> int:
+        """
+        Method to get the current volume of the Television object
+        :return: volume value
+        """
+        return self.__volume
+
+    def channel_get(self) -> int:
+        """
+        Method to get the current channel of the Television object
+        :return: channel value
+        """
+        return self.__channel
+
+    def isPowered(self) -> bool:
+        """
+        Method to check if the Television object is powered or not
+        :return: true if on, false if off
+        """
+        return self.__status
+
+    def isMuted(self) -> bool:
+        """
+        Method to check if the Television object is muted or not
+        :return: true if muted, false if not muted
+        """
+        return self.__muted
 
     def __str__(self) -> str:
         """
