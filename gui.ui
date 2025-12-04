@@ -184,6 +184,9 @@
     </property>
    </widget>
    <widget class="QPushButton" name="button_mute">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -209,6 +212,9 @@
     </property>
    </widget>
    <widget class="QSlider" name="slider_channel">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>125</x>
@@ -252,6 +258,9 @@
     </property>
    </widget>
    <widget class="QSlider" name="slider_volume">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>225</x>
@@ -292,6 +301,9 @@
     </property>
    </widget>
    <widget class="QPushButton" name="button_channel_up">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -317,6 +329,9 @@
     </property>
    </widget>
    <widget class="QPushButton" name="button_channel_down">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -342,6 +357,9 @@
     </property>
    </widget>
    <widget class="QPushButton" name="button_volume_up">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>300</x>
@@ -367,6 +385,9 @@
     </property>
    </widget>
    <widget class="QPushButton" name="button_volume_down">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>300</x>
